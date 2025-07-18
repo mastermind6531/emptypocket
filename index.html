@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Support Me</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+
+    .wallet-box {
+      background-color: #111;
+      padding: 20px;
+      border: 1px solid #333;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .wallet-address {
+      font-size: 0.95rem;
+      word-break: break-all;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #fff;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+
+    <h1>
+        Every dollar you give writes a new chapter in my life — one where kindness wins. I’ll never forget it.
+    </h1>
+
+  <div class="wallet-box">
+    my wallet address(theter trc20):
+    <div class="wallet-address" id="wallet">
+    TPN6kBxmsg3eaa89g6w7oUT98rqBTFfmYC
+    </div>
+    <button onclick="copyWallet()">Copy Address</button>
+  </div>
+
+  <script>
+    function copyWallet() {
+      const wallet = document.getElementById('wallet').innerText;
+      navigator.clipboard.writeText(wallet);
+      alert('Wallet address copied!');
+    }
+  </script>
+
+</body>
+</html>
